@@ -1,0 +1,364 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*<---------- header ----------->*/
+
+.header {
+  background-color: #1c3643;
+  height: 100px;
+
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.letter {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-family: 'Merienda', cursive;
+  transform: skew(-7deg);
+}
+.letter.second {
+  color: blue;
+}
+.letter.first {
+  color: #34fafa;
+  font-size: 50px;
+}
+.logo-name {
+  font-size: 15px;
+  font-family:'Anton', sans-serif;
+  align-self: flex-end;
+}
+.logo {
+  /* border: 1px solid blue; */
+  color: blue;
+  display: inherit;
+  align-items: center;
+  /* justify-self: flex-start; */
+}
+.img {
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 75px;
+  width: 95px;
+  background-color: #1c3643c9;
+  font-size: 22px;
+  color: white;
+  /* border: 1px solid red; */
+
+  margin: 0;
+  padding-bottom: 10px;
+}
+.dudas.oxxo {
+  background-color: red;
+}
+.sub-title {
+  margin: 0;
+  padding: 0;
+  font-size: 2px;
+  flex-shrink: 0;
+}
+.menu {
+  /* border: 1px solid red; */
+  display: inherit;
+  align-items: flex-end;
+  font-size: 18px;
+  /* padding: 0; */
+  padding-bottom: 23px;
+}
+ul {
+  display: inherit;
+  align-items: center;
+
+  
+}
+li, .li-menu {
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 25px;
+}
+li a:hover {
+  color: red;
+}
+.buscador::before {
+  display: block;
+  position: absolute;
+  content: '\f002';
+  font-family: "FontAwesome";
+  font-size: 20px;
+  color: rgb(74, 74, 74, .85);
+  padding: 3px;
+}
+
+.buscador {
+  display: inherit;
+  align-items: center;
+  width: 250px;
+  position: relative;
+}
+
+.buscador-input {
+  height: 35px;
+  width: 250px;
+
+  font-size: 22px;
+  padding: 6px 24px;
+  border: 1px solid #1e5372;
+  border-radius: 6px;
+  box-shadow: inset 0 -.2em rgb(0, 0, 0, .2);
+  outline: 0;
+}
+.dudas {
+  /* margin-top: 5px; */
+  height: 40px;
+  width: 100%;
+  background-color: blue;
+  /* border: 1px solid red; */
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*<-------------- Portada ----------> */
+.hero {
+
+  height: 515px;
+  background-color: #0b181f;
+  display: flex;
+
+  justify-content: center;
+}
+.hero-image {
+  background-size: cover;
+  height: inherit;
+  width: 100%;
+  /* min-width: auto; */
+  /* object-fit: cover; */
+  /* background-repeat: no-repeat; */
+}
+
+/*<-------------- contenido ----------> */
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 293px));
+  justify-content: center;
+  grid-gap: 28px; 
+  padding-top: 10px;
+}
+.post {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  /* width: 200px; */
+}
+/* .post:hover {
+  animation: imagen 3s forwards;
+
+} */
+@keyframes imagen{
+  from {
+    transform: scale(1);
+    transform: translateX(0);
+  }
+  to {
+    transform: scale(2) translate(170px, 50px);
+  }
+}
+.post-image {
+  margin: 0;
+}
+.post-image img {
+  width: 100%;
+  vertical-align: top;
+}
+.post-overlay {
+  background: rgba(0, 0, 0, .4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.post:hover .post-overlay {
+  display: flex;
+}
+
+.post-likes,
+.post-comments {
+  width: 80px;
+  margin: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+.header-title {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  color: white;
+  padding-top: 20px;
+}
+.banners {
+  display: grid;
+  grid-template: 280px / 1fr 1fr 1fr 1fr;
+  grid-template-areas: "protein quemadores ropa woman";
+  width: 100%;
+  height: auto;
+
+}
+.banner {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.protein {
+  grid-area: protein;
+  
+  /* background-image: url(https://yt3.ggpht.com/a-/AAuE7mCZLbzOC1VvzsHJdN0WpJNixtA2eV_oJhdQuw=s900-mo-c-c0xffffffff-rj-k-no); */
+  background-image: url(https://www.greatestphysiques.com/wp-content/uploads/2016/07/Jeff-no7-779x1024.jpg);
+  background-color: rgba(0, 222, 255, 0.62);
+  background-blend-mode: multiply;
+  background-position-y: -10px;
+
+}
+
+.banner-title {
+  color: white;
+  font-size: 1.5em;
+}
+
+.quemadores {
+  grid-area: quemadores;
+  background-image: url(https://www.sportlife.com.mx/wp-content/uploads/2018/06/beneficios-entrenar-pareja.jpg);
+  background-color: gray;
+  background-blend-mode: multiply;
+  
+  background-position-x: -70px;
+}
+
+.clothing {
+  grid-area: ropa;
+  background-image: url(https://c.stocksy.com/a/iZ3400/z9/967058.jpg);
+  background-color: gray;
+  background-blend-mode: multiply;
+  padding-right: 110px;
+  background-position-x: -30px;
+}
+.woman {
+  grid-area: woman;
+  background-color: #ff7bc4e0;
+  background-image: url(https://i.pinimg.com/originals/7d/8e/28/7d8e28be37bb819ef471d4ba29eaf4f1.jpg);
+  background-blend-mode: multiply;
+  background-position-x: right;
+  /* padding-right: 110px; */
+  /* background-position-y: 10px; */
+}
+.popular-brands-supplements {
+  height: 250px;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding-bottom: 40px;
+  /* border: 1px solid rebeccapurple; */
+}
+.popular-title {
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+.box-brands {
+  max-width: 1100px;
+  display: flex;
+  height: 150px;
+  /* border: 1px solid red; */
+  justify-content: center;
+  align-items: center;
+}
+.img-tumbnail {
+  height: 130px;
+  margin: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  /* border: 1px solid blue; */
+}
+.img-brands {
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 180px;
+}
+.img-brands:nth-last-of-type(odd) {
+  object-fit: fill;
+  /* padding-right: 2px; */
+}
+.carousel-inner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6px;
+}
+.row {
+  margin: 20px 0;
+  width: 313px;
+  height: 280px;
+  /* background-color: #45df26; */
+  border-right: 1px solid #d0c8c8;
+  padding-right: 20px;
+}
+.payment-form {
+  font-family: Helvetica, Arial, sans-serif;
+  display: inherit;
+  flex-direction: column;
+}
+.img-container {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+}
+.site-info {
+  /* font-size: 1.8em; */
+  text-align: center;
+  margin-bottom: 0;
+}
+.site-info-link {
+  color: blue;
+  font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .post-list {
+    grid-gap: 3px;
+  }
+}

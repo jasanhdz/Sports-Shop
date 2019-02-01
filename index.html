@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sport Shop</title>
+  <link href="https://fonts.googleapis.com/css?family=Anton|Merienda|Permanent+Marker" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <a class="img" href="index.html">
+        <span class="letter first">S</span ><span class="letter second">S</span>
+        <span class="logo-name">Sport Shop</span>
+      </a>
+      <!-- <p class="sub-title">Sport Shop</p> -->
+    </div>
+    <nav class="menu">
+      <li>
+        <a class="li-menu" href="">Mujer</a>
+      </li>
+      <li>
+          <a class="li-menu" href="">Hombre</a>
+        </li>
+      <li>
+          <a class="li-menu" href="">Suplementos</a>
+      </li>
+      <li>
+          <a class="li-menu" href="">Articulos</a>
+      </li>
+    </nav>
+    <div class="buscador">
+      <form action="two.html">
+        <input type="text" class="buscador-input"/ placeholder="Buscar"> 
+      </form>
+    </div>
+  </div>
+  <section class="dudas">
+      <p>¿DUDAS? LLAMANOS AL: 4778-3469 O AL 7777777777</p>
+  </section>
+  <section class="hero">
+    <img class="hero-image" src="https://www.marti.mx/cs/groups/public/documents/digitalmedia/home_champion_slider.jpg" alt="">
+    <!-- <img class="hero-image" src="https://www.homeandgym.com/wp-content/uploads/2015/05/atletas.jpg" alt=""> -->
+  </section>
+  <section class="banners">
+    <a class="banner protein">
+      <h3 class="banner-title">Proteínas</h3>
+    </a>
+    <a class="banner quemadores">
+        <h3 class="banner-title">Quemadores</h3>
+    </a>
+    <a class="banner clothing">
+        <h3 class="banner-title">Ropa</h3>
+    </a>
+    <a class="banner woman">
+        <h3 class="banner-title">Todo para ellas</h3>
+    </a>
+  </section>
+  <section class="popular-brands-supplements">
+      <h3 class="popular-title">Marcas Populares</h3>
+      <div class="box-brands">
+        <a href="" class="img-tumbnail">
+          <img class="img-brands" src="images/marcas/muscletech.png" alt="">
+        </a>
+        <a href="" class="img-tumbnail">
+            <img class="img-brands" src="images/marcas/bpi-sports-logo.png" alt="">
+        </a>
+        <a href="" class="img-tumbnail">
+            <img class="img-brands" src="images/marcas/madlabz.png" alt="">
+        </a>
+        <a href="" class="img-tumbnail">
+            <img class="img-brands" src="images/marcas/ubslabs.jpg" alt="">
+        </a>
+        <a href="" class="img-tumbnail">
+          <img class="img-brands" src="images/marcas/Optimum-Nutrition-logo.png" alt="">
+        </a>
+        <a href="" class="img-tumbnail">
+          <img class="img-brands" src="images/marcas/Musclepharm-logo-800x450.jpg" alt="">
+        </a>
+      </div>
+  </section>
+  <div class="carousel-inner">
+    <div class="row payment-form">
+      <div class="img-container">
+        <img src="images/carousel/payments.jpg" alt="" width="200px">
+      </div>
+      <h3 class="site-info">Multiples Formas de Pago</h3>
+      <p>Paga por Transferencia Bancaria, Depósito Bancario, Tarjeta Credito/Debito o en Oxxo!</p>
+      <a class="site-info-link" href="">Cómo pagar</a>
+    </div>
+    <div class="row shipping">
+      <div class="img-container">
+        <img src="images/carousel/shipping.png" alt="" width="200px">
+      </div>
+      <h3 class="site-info">Entrega a Domicilio</h3>
+      <p>En SportShop tenemos envíos por Estafeta y DHL, tú eliges el método.</p>
+      <a class="site-info-link" href="">Más sobre envíos</a>
+    </div>
+    <div class="row purchase">
+      <div class="img-container">
+        <img src="images/carousel/protected-paymend.png" alt="" width="200px">
+      </div>
+      <h3 class="site-info">Compra Protegida</h3>
+      <p>Te acompañamos hasta que recibas tus productos. Seguro GRATIS en compras menores a $5,000.</p>
+      <a class="site-info-link" href="">Cómo te protegemos</a>
+    </div>
+  </div>
+  <section class="dudas oxxo">
+    <a>Pago en OXXO o en Tarjetas!! ver más!</a>
+</section>
+  <section class="post-list">
+    <a class="post">
+      <figure class="post-image">
+        <img src="images/woman-conjunto-01.jpeg" alt="">
+      </figure>
+      <div class="post-overlay">
+        <p>
+          <span class="post-likes">150</span>
+          <span class="post-comments">10</span>
+        </p>
+      </div>
+    </a>
+  </section>
+  <footer>
+    Footer y Formulario de contacto
+  </footer>
+  <script>
+  const $img = document.getElementsByClassName("post");
+  for (var i = 0; i < $img.length; i++) {
+    $img[i].addEventListener('click', (event) => {
+      console.log("hola");
+    });
+}
+  </script>
+</body>
+</html>
