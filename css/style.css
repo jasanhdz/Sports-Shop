@@ -137,7 +137,7 @@ li a:hover {
 /*<-------------- Portada ----------> */
 .hero {
 
-  height: 515px;
+  height: auto;
   background-color: #0b181f;
   display: flex;
 
@@ -147,6 +147,7 @@ li a:hover {
   background-size: cover;
   height: inherit;
   width: 100%;
+  margin: -4px;
   /* min-width: auto; */
   /* object-fit: cover; */
   /* background-repeat: no-repeat; */
@@ -374,8 +375,9 @@ li a:hover {
   font-size: .8em;
 }
 .container {
-  width: 610px;
-  padding: 10px 10px 20px;
+  width: 660px;
+  padding: 26px 10px;
+  /* border: 1px solid red; */
 }
 .form input, button {
   width: auto;
@@ -391,6 +393,7 @@ li a:hover {
   background-color: #2db6c9;
   color: white;
   cursor: pointer;
+  border-color: #2db6c9;
 }
 .footer-bottom {
   /* border: 1px solid yellow; */
@@ -431,5 +434,67 @@ li a:hover {
 @media screen and (max-width: 768px) {
   .post-list {
     grid-gap: 3px;
+  }
+  .header {
+    height: auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+  .hero {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 1258px;
+  }
+  .hero-image {
+    width: auto;
+    object-fit: cover;
+  }
+  .box-brands {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .img-tumbnail {
+    padding: 16px 0;
+  }
+  .carousel-inner {
+    margin-top: 200px;
+    flex-wrap: wrap;
+  }
+  .row {
+    border: none;
+  }
+  .row:nth-last-of-type(3) {
+    border-right: 1px solid #d0c8c8;
+  }
+  .banners {
+    /* grid-template: 280px / 1fr 1fr 1fr 1fr;
+    grid-template-areas: "protein quemadores ropa woman"; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 300px 300px 300px;
+    grid-template-areas: "protein"
+                        "quemadores"
+                          "ropa"
+                          "woman"; 
+  }
+  .protein {
+    background-position-y: 0px;
+    background-position-x: 150px;
+    background-size: contain;
+    object-fit: cover;
+  }
+  .quemadores {
+    background-position-x: 0;
+    background-position-y: -60px;
+  }
+  .clothing {
+    background-position-x: 0;
+    background-position-y: -75px;
+  }
+  .woman {
+    /* background-size: contain; */
+    background-size: 50%;
+    background-position-x: center;
+
   }
 }
