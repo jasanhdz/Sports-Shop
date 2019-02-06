@@ -440,6 +440,7 @@ li a:hover {
     display: inline-flex;
     flex-wrap: wrap;
     padding: 20px 0;
+    flex-wrap: wrap;
   }
   .menu {
     flex-wrap: wrap;
@@ -447,10 +448,8 @@ li a:hover {
   .hero {
     display: inline-flex;
     flex-wrap: wrap;
-    width: 1258px;
   }
   .hero-image {
-    width: auto;
     object-fit: cover;
   }
   .box-brands {
@@ -510,5 +509,23 @@ li a:hover {
   }
   .popular-brands-supplements {
     margin-bottom: 330px;
+  }
+
+  .row:nth-last-of-type(3) {
+    border-right: none;
+  }
+  .protein {
+    background-position-x: 0;
+  }
+  .quemadores {
+    background-position-y: 0px;
+  }
+  .clothing {
+    background-position-y: 0;
+  }
+  .woman {
+    background-size: cover;
+    background-position-x: center;
+
   }
 }
