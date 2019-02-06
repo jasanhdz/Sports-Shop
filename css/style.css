@@ -288,7 +288,7 @@ li a:hover {
   /* border: 1px solid rebeccapurple; */
 }
 .popular-title {
-  padding: 20px 0;
+  padding: 20px 0 0;
   font-size: 24px;
   font-weight: bold;
 }
@@ -376,7 +376,7 @@ li a:hover {
 }
 .container {
   width: 660px;
-  padding: 26px 10px;
+  padding: 40px 10px;
   /* border: 1px solid red; */
 }
 .form input, button {
@@ -441,6 +441,9 @@ li a:hover {
     flex-wrap: wrap;
     padding: 20px 0;
   }
+  .menu {
+    flex-wrap: wrap;
+  }
   .hero {
     display: inline-flex;
     flex-wrap: wrap;
@@ -496,5 +499,16 @@ li a:hover {
     background-size: 50%;
     background-position-x: center;
 
+  }
+}
+@media screen and (max-width: 500px) {
+  .header {
+
+  }
+  .menu {
+    justify-content: center;
+  }
+  .popular-brands-supplements {
+    margin-bottom: 330px;
   }
 }
