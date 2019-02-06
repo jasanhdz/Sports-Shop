@@ -354,8 +354,25 @@ li a:hover {
   justify-content: center;
 }
 
-
-
+.footer {
+  color: white;
+  background-color: #1c3643;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-title {
+  font-size: 1.2em;
+}
+.container {
+  border: 1px solid red;
+}
+.form input {
+  width: 610px;
+  /* padding: 6px; */
+  font-size: 1.2em;
+  border: 1px solid blue;
+}
 
 @media screen and (max-width: 768px) {
   .post-list {
