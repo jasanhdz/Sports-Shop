@@ -7,8 +7,9 @@ body {
 
 .header {
   background-color: #1c3643;
-  height: 100px;
-
+  height: auto;
+  min-height: 59px;
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -35,6 +36,7 @@ body {
 .logo {
   /* border: 1px solid blue; */
   color: blue;
+  height: 59px;
   display: inherit;
   align-items: center;
   /* justify-self: flex-start; */
@@ -46,9 +48,9 @@ body {
   align-items: center;
   justify-content: center;
 
-  height: 75px;
+  height: inherit;
   width: 95px;
-  background-color: #1c3643c9;
+  /* background-color: #1c3643c9; */
   font-size: 22px;
   color: white;
   /* border: 1px solid red; */
@@ -69,10 +71,8 @@ body {
 .menu {
   /* border: 1px solid red; */
   display: inherit;
-  align-items: flex-end;
+  align-items: center;
   font-size: 18px;
-  /* padding: 0; */
-  padding-bottom: 23px;
 }
 .w:hover {
   background-color: rgba(5, 183, 199, .89);
@@ -85,6 +85,7 @@ body {
   display: none;
   justify-content: space-between;
   border-radius: 3px;
+  border-top-left-radius: 0;
 
   position: absolute;
   width: auto;
@@ -133,15 +134,21 @@ ul {
 
   
 }
+li {
+  display: block;
+}
 li, .li-menu {
   list-style: none;
   color: white;
   text-decoration: none;
   padding: 5px;
+  height: inherit;
+  margin: 0;
 }
 .li-menu {
   font-family: 'Permanent Marker', cursive;
-  font-size: 25px;
+  font-size: 1.3em;
+  align-items: center;
 }
 li a:hover {
   color: red;
@@ -157,15 +164,15 @@ li a:hover {
 }
 
 .buscador {
+  height: 59px;
   display: inherit;
   align-items: center;
-  width: 250px;
   position: relative;
 }
 
 .buscador-input {
   height: 35px;
-  width: 250px;
+  max-width: 205px;
 
   font-size: 22px;
   padding: 6px 24px;
@@ -177,29 +184,57 @@ li a:hover {
 .dudas {
   cursor: pointer;
   height: auto;
-  padding: 10px;
+  padding: 7px;
   background-color: #0000ffa1;
   color: white;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: .95em;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-weight: bold; */
+  font-size: .8em;
   /* text-align: center; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 /*<-------------- Portada ----------> */
+
 .hero {
-  display: flex;
-  /* flex-wrap: wrap; */
-}
-.hero-image {
-  width: 100%;
-  height: 520px;
+  height: 500px;
+  background-image: url('../images/backgrounds/paisaje.jpg');
   background-size: cover;
   object-fit: cover;
+  position: relative;
+  background-position-y: -110px;
   background-repeat: no-repeat;
+  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-blend-mode: multiply;
 }
+.hero-image {
+  animation: pulso 3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  will-change: opacity;
+  -webkit-animation: pulso 3s alternate infinite;
+}
+
+@keyframes pulso {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: .8;     
+  }
+  80% {
+    opacity: .8;
+  } 
+  100% {
+    opacity: 0;
+  }
+}
+
 
 /*<-------------- contenido ----------> */
 .container-clothing {
@@ -253,7 +288,6 @@ li a:hover {
 /*<-------------- contenido ----------> */
 .header-title {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   color: white;
   padding-top: 20px;
@@ -264,6 +298,7 @@ li a:hover {
   grid-template-areas: "protein quemadores ropa woman";
   width: 100%;
   height: auto;
+  position: sticky;
 
 }
 .banner {
@@ -349,9 +384,10 @@ li a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   object-fit: cover;
-  width: 150px;
+  width: 125px;
   border-radius: 6px;
   height: inherit;
+  margin: 0 20px;
 }
 .img-brands:nth-last-of-type(odd) {
   object-fit: fill;
@@ -370,7 +406,11 @@ li a:hover {
   height: 280px;
   /* background-color: #45df26; */
   border-right: 1px solid #d0c8c8;
-  padding-right: 20px;
+  padding: 0 50px 0 0;
+  /* border: 1px solid red; */
+}
+.row:nth-last-of-type(1) {
+  border: none;
 }
 .row p {
   text-align: center;
@@ -474,7 +514,15 @@ li a:hover {
   font-size: .6em;
   text-align: center;
 }
+@media screen and (max-width: 1100px) {
+  .hero {
+    background-position-y: 0;
+  }
+}
 @media screen and (max-width: 768px) {
+  .row {
+    padding: 0;
+  }
   .post-list {
     grid-gap: 3px;
   }
@@ -485,7 +533,9 @@ li a:hover {
     height: auto;
     padding: 10px;
   }
+  
   .header {
+    font-size: .8em;
     height: auto;
     display: inline-flex;
     flex-wrap: wrap;
@@ -495,32 +545,10 @@ li a:hover {
   .menu {
     flex-wrap: wrap;
   }
-  .hero {
+  /* .hero {
     margin-bottom: 4px;
     flex-wrap: wrap;
-  }
-  .hero-image {
-    object-fit: cover;
-    height: 460px;
-    animation: pulso 3s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    will-change: opacity;
-  }
-  @keyframes pulso {
-    0% {
-      opacity: 0;
-    }
-    30% {
-      opacity: .8;     
-    }
-    80% {
-      opacity: .8;
-    } 
-    100% {
-      opacity: 0;
-    }
-  }
+  } */
   .box-brands {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -590,6 +618,11 @@ li a:hover {
   }
 }
 @media screen and (max-width:350px) {
+  .img-brands {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+  }
   .row {
     height: auto;
     padding-right: 0;
