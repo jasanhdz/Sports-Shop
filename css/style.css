@@ -74,6 +74,59 @@ body {
   /* padding: 0; */
   padding-bottom: 23px;
 }
+.w:hover {
+  background-color: rgba(5, 183, 199, .89);
+  position: relative;
+}
+.w:hover .options {
+  display: flex;
+}
+.options {
+  display: none;
+  justify-content: space-between;
+  border-radius: 3px;
+
+  position: absolute;
+  width: auto;
+  /* height: 100px;  */
+  padding: 5px 30px 25px 10px; 
+
+  background-color: rgba(5, 183, 199, .89);
+  z-index: 2;
+  margin-top:5px;
+  margin-left: -5px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+.submenu-title {
+  /* margin-bottom: 2px; */
+}
+.options a {
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  text-align: center;
+  font-size: .8em;
+}
+.ropa:nth-of-type(1) {
+  width: 200px;
+}
+.ropa:nth-of-type(4) {
+  width: auto;
+}
+.border {
+  margin: 9px 0;
+  border-right: 1px solid;
+}
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 260px));
+}
+.suplementos {
+  padding-left: 10px;
+}
 ul {
   display: inherit;
   align-items: center;
@@ -85,6 +138,8 @@ li, .li-menu {
   color: white;
   text-decoration: none;
   padding: 5px;
+}
+.li-menu {
   font-family: 'Permanent Marker', cursive;
   font-size: 25px;
 }
@@ -135,82 +190,67 @@ li a:hover {
 }
 /*<-------------- Portada ----------> */
 .hero {
-
-  height: auto;
-  background-color: #0b181f;
   display: flex;
-
-  justify-content: center;
+  /* flex-wrap: wrap; */
 }
 .hero-image {
-  background-size: cover;
-  height: inherit;
   width: 100%;
-  margin: -4px;
-  /* min-width: auto; */
-  /* object-fit: cover; */
-  /* background-repeat: no-repeat; */
+  height: 520px;
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
 }
 
 /*<-------------- contenido ----------> */
-.post-list {
+.container-clothing {
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 293px));
   justify-content: center;
-  grid-gap: 28px; 
-  padding-top: 10px;
+  grid-gap: 28px;
+  margin-bottom: 50px;
 }
-.post {
+.article {
   cursor: pointer;
-  position: relative;
   display: block;
-  /* width: 200px; */
-}
-/* .post:hover {
-  animation: imagen 3s forwards;
-
-} */
-@keyframes imagen{
-  from {
-    transform: scale(1);
-    transform: translateX(0);
-  }
-  to {
-    transform: scale(2) translate(170px, 50px);
-  }
+  position: relative;
+  border-radius: 9px;
+  /* border:1px solid blue; */
 }
 .post-image {
   margin: 0;
 }
 .post-image img {
   width: 100%;
+  max-height: 265px;
   vertical-align: top;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
 }
-.post-overlay {
-  background: rgba(0, 0, 0, .4);
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  color: white;
+.title {
   text-align: center;
 }
-
-.post:hover .post-overlay {
-  display: flex;
+.info {
+  background-color: rgba(0, 0, 0, .39);
+  padding: 10px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
-
-.post-likes,
-.post-comments {
-  width: 80px;
-  margin: 5px;
+.price {
+  margin-top: 0;
+  text-align: center;
+}
+.desc {
+  margin: 0;
+  text-align: center;
+}
+.marca {
+  text-align: center;
   font-weight: bold;
-  display: inline-block;
+  color: blue;
+  /* margin-bottom: 5px;  */
 }
+
+/*<-------------- contenido ----------> */
 .header-title {
   display: flex;
   /* align-items: center; */
@@ -283,6 +323,7 @@ li a:hover {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin: 10px 0 75px 0;
 }
 .popular-title {
   padding: 20px 0 0;
@@ -305,11 +346,12 @@ li a:hover {
   /* border: 1px solid blue; */
 }
 .img-brands {
-  /* background-size: cover; */
+  background-size: cover;
   background-repeat: no-repeat;
   object-fit: cover;
   width: 150px;
   border-radius: 6px;
+  height: inherit;
 }
 .img-brands:nth-last-of-type(odd) {
   object-fit: fill;
@@ -459,6 +501,25 @@ li a:hover {
   }
   .hero-image {
     object-fit: cover;
+    height: 460px;
+    animation: pulso 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    will-change: opacity;
+  }
+  @keyframes pulso {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: .8;     
+    }
+    80% {
+      opacity: .8;
+    } 
+    100% {
+      opacity: 0;
+    }
   }
   .box-brands {
     flex-wrap: wrap;
@@ -508,9 +569,6 @@ li a:hover {
   }
 }
 @media screen and (max-width: 630px) {
-  .header {
-
-  }
   .menu {
     justify-content: center;
   }
