@@ -568,6 +568,8 @@ li a:hover {
   line-height: 40px;
   border-radius: 50%;
   background: #1e5372;
+  position: fixed;
+  font-size: 18px;
 
   cursor: pointer;
   position: absolute;
@@ -685,6 +687,7 @@ li a:hover {
 @media screen and (max-width:500px) {
   .burguer-button {
     display: inline-block;
+    font-size: 18px;
   }
   .header {
     flex-direction: column;
