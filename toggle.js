@@ -1,4 +1,4 @@
-const $burguerButton = document.getElementById('burguer-button');
+    const $burguerButton = document.getElementById('burguer-button');
     const $menu = document.getElementById('menu');
     
     const consulta = window.matchMedia('(max-width: 500px)');
@@ -8,6 +8,14 @@ const $burguerButton = document.getElementById('burguer-button');
       $menu.classList.toggle("active");
       $burguerButton.classList.toggle('icon-cross');
     }
+    
+    function showMenu(){
+      $menu.classList.add('active');
+    };
+
+    function hideMenu(){
+      $menu.classList.remove('active');
+    };
 
     function mediaQuery() {
       if(consulta.matches) {
