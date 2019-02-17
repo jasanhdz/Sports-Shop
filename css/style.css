@@ -1,3 +1,48 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts');
+  src:  url('../fonts#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7vu7qq') format('truetype'),
+    url('../fonts/icomoon.woff?7vu7qq') format('woff'),
+    url('../fonts/icomoon.svg?7vu7qq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart:before {
+  content: "\e93a";
+}
+.icon-user:before {
+  content: "\e971";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-close:before {
+  content: "\ea0d";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -514,6 +559,23 @@ li a:hover {
   font-size: .6em;
   text-align: center;
 }
+/*Bottones de hamburguese*/
+.burguer-button {
+  display: none;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background: #1e5372;
+
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 3;
+}
+/*Bottones de hamburguese*/
 @media screen and (max-width: 1100px) {
   .hero {
     background-position-y: 0;
@@ -597,6 +659,9 @@ li a:hover {
   }
 }
 @media screen and (max-width: 630px) {
+  .container-clothing {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
   .menu {
     justify-content: center;
   }
@@ -615,6 +680,46 @@ li a:hover {
   .woman {
     background-size: cover;
     background-position-x: center;
+  }
+}
+@media screen and (max-width:500px) {
+  .burguer-button {
+    display: inline-block;
+  }
+  .header {
+    flex-direction: column;
+  }
+  .logo {
+    justify-content: center;
+  }
+  .menu {
+    background-color: rgb(45, 182, 201, .8);
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    position: absolute;
+    left: -100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 10px 0;
+  }
+
+  .menu.active {
+    left: 0;
+    transition: .3s;
+  }
+  .buscador {
+    justify-content: center;
+    position: static;
+  }
+  
+  .menu li a {
+    width: inherit;
+    border-bottom: 1px solid white;
   }
 }
 @media screen and (max-width:350px) {

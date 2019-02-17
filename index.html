@@ -18,7 +18,8 @@
         <span class="logo-name">Sport Shop</span>
       </a>
     </div>
-    <nav class="menu">
+    <span class="burguer-button icon-menu" id="burguer-button"></span>
+    <nav class="menu" id="menu">
       <li class="w">
           <a class="li-menu" href="">Suplementos</a>
           <nav class="options">
@@ -325,13 +326,6 @@
       </div>
     </div>
   </footer>
-  <script>
-  const $img = document.getElementsByClassName("post");
-  for (var i = 0; i < $img.length; i++) {
-    $img[i].addEventListener('click', (event) => {
-      console.log("hola");
-    });
-}
-  </script>
+  <script src="toggle.js"></script>
 </body>
 </html>
