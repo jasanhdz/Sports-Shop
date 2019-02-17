@@ -715,6 +715,7 @@ li a:hover {
   .menu.active {
     left: 0;
     transition: .3s;
+    background-color: rgb(45, 182, 201, .8);
   }
   .buscador {
     justify-content: center;
