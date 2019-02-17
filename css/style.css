@@ -287,7 +287,7 @@ li a:hover {
   grid-template-columns: repeat(3, minmax(100px, 293px));
   justify-content: center;
   grid-gap: 28px;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
   position: relative;
 }
 .article {
