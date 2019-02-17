@@ -35,4 +35,8 @@
 			var $body = document.body;
 			var gestos = new Hammer($body);
 			gestos.on('swipeleft', hideMenu);
-			gestos.on('swiperight', showMenu);
+      gestos.on('swiperight', showMenu);
+      
+      function imgActive() {
+        console.log("hicimos match con el articulo");
+      }
