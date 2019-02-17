@@ -575,7 +575,7 @@ li a:hover {
   position: absolute;
   left: 20px;
   top: 20px;
-  z-index: 3;
+  z-index: 5;
 }
 /*Bottones de hamburguese*/
 @media screen and (max-width: 1100px) {
@@ -688,6 +688,7 @@ li a:hover {
   .burguer-button {
     display: inline-block;
     font-size: 18px;
+    position: fixed;
   }
   .header {
     flex-direction: column;
@@ -702,7 +703,7 @@ li a:hover {
     flex-direction: column;
     width: 100%;
 
-    position: absolute;
+    position: fixed;
     left: -100%;
     right: 0;
     top: 0;

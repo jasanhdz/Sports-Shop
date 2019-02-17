@@ -1,40 +1,38 @@
-    const $burguerButton = document.getElementById('burguer-button');
-    const $menu = document.getElementById('menu');
-    
-    const consulta = window.matchMedia('(max-width: 500px)');
-    consulta.addListener(mediaQuery);
-    
-    function ToggleMenu() {
-      $menu.classList.toggle("active");
-      $burguerButton.classList.toggle('icon-cross');
-    }
-    
-    function showMenu(){
-      $menu.classList.add('active');
-    };
+      var consulta = window.matchMedia('(max-width: 500px)');
+			consulta.addListener(mediaQuery);
 
-    function hideMenu(){
-      $menu.classList.remove('active');
-    };
+			var $burgerButton = document.getElementById('burguer-button'); 
+			var $menu = document.getElementById('menu');
+			function toggleMenu(){
+        $menu.classList.toggle('active');
+        $burguerButton.classList.toggle('icon-close');
+			};
 
-    function mediaQuery() {
-      if(consulta.matches) {
-        console.log("Se cumplió la condición");
-        // Si la condición de la resolución se cumple activamos la clase css
-        $burguerButton.addEventListener('touchstart', ToggleMenu);
+			function showMenu(){
+				$menu.classList.add('active');
+			};
 
-      } else {
-        $burguerButton.removeEventListener('touchstart', ToggleMenu);
-        console.log("No se cumplió la condición");
-      }
-    }
-    //Gestos Touch
+			function hideMenu(){
+				$menu.classList.remove('active');
+			};
+
+			function mediaQuery(){
+				if(consulta.matches){
+					// Si se cumple hagamos esto
+					console.log('se cumplio la condición');
+					$burgerButton.addEventListener('touchstart', toggleMenu); 
+				} else {
+					$burgerButton.removeEventListener('touchstart', toggleMenu);
+					//Si no se cumple hagamos esto
+					console.log('no se cumplió la condición');
+				}
+			}
+			mediaQuery();
+
+			// $burgerButton.addEventListener('touchstart', toggleMenu); 
+			
+			//Gestos Touch
 			var $body = document.body;
 			var gestos = new Hammer($body);
 			gestos.on('swipeleft', hideMenu);
 			gestos.on('swiperight', showMenu);
-
-    var bLazy = new Blazy({
-      // options
-      selector: 'img'
-  });
