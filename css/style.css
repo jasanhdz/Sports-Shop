@@ -693,10 +693,14 @@ li a:hover {
     right: 20%;
   }
   .categorias {
-    display: none;
+    display: flex;
+    flex-direction: column;
   }
   .ropa:first-child {
     width: 100%;
+  }
+  .options {
+    font-size: .8em;
   }
   .options h3 {
     display: none;
@@ -732,7 +736,7 @@ li a:hover {
     width: 100%; 
   }
   .menu {
-    /* background-color: rgb(45, 182, 201, .8) !important; */
+    background-color: rgb(45, 182, 201, .8) !important;
     
     display: flex;
     flex-direction: column;
@@ -748,9 +752,13 @@ li a:hover {
   }
 
   .menu.active {
+    z-index: 3;
     left: 0;
     transition: .3s;
-    background-color: rgb(45, 182, 201, .8) !important;
+    /* background-color: rgb(45, 182, 201, .8) !important; */
+  }
+  .menu.active:hover {
+    position: initial;
   }
   .buscador {
     justify-content: center;
