@@ -692,6 +692,25 @@ li a:hover {
   .buscador::before  {
     right: 20%;
   }
+  .categorias {
+    display: none;
+  }
+  .ropa:first-child {
+    width: 100%;
+  }
+  .options h3 {
+    display: none;
+  }
+  .w:hover .options {
+    position: static;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .options.active {
+    background-color: red;
+    display: flex;
+  }
   .burguer-button {
     display: inline-block;
     font-size: 18px;
@@ -713,7 +732,7 @@ li a:hover {
     width: 100%; 
   }
   .menu {
-    background-color: rgb(45, 182, 201, .8) !important;
+    /* background-color: rgb(45, 182, 201, .8) !important; */
     
     display: flex;
     flex-direction: column;
@@ -731,7 +750,7 @@ li a:hover {
   .menu.active {
     left: 0;
     transition: .3s;
-    background-color: rgb(45, 182, 201, .8);
+    background-color: rgb(45, 182, 201, .8) !important;
   }
   .buscador {
     justify-content: center;
