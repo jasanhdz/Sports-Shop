@@ -1,7 +1,7 @@
       var consulta = window.matchMedia('(max-width: 500px)');
 			consulta.addListener(mediaQuery);
 
-			var $burgerButton = document.getElementById('burguer-button'); 
+			var $burgerButton = document.getElementById('burger-button'); 
 			var $menu = document.getElementById('menu');
 			function toggleMenu(){
         $menu.classList.toggle('active');
