@@ -12,14 +12,20 @@
 </head>
 <body>
   <div class="header">
-    <div class="logo">
+    <div class="logo item">
       <a class="img" href="index.html">
         <span class="letter first">S</span ><span class="letter second">S</span>
         <span class="logo-name">Sport Shop</span>
       </a>
     </div>
-    <span class="burguer-button icon-menu" id="burger-button"></span>
-    <nav class="menu" id="menu">
+    <div class="burguer-button icon-search item" id="search"></div>
+    <div class="buscador" id="buscador">
+      <form action="two.html">
+        <div class="arrow icon-arrow-left" id="close"></div><input type="text" class="buscador-input" placeholder="Buscar"> 
+      </form>
+    </div>
+    <div class="burguer-button icon-menu item" id="burger-button"></div>
+      <nav class="menu" id="menu"> 
       <li class="w" id="open">
           <a class="li-menu" href="#">Suplementos</a>
           <nav class="options" id="activeMenu" >
@@ -206,12 +212,8 @@
               </div>
           </nav>
       </li>
-    </nav>
-    <div class="buscador">
-      <form action="two.html">
-        <input type="text" class="buscador-input"/ placeholder="Buscar"> 
-      </form>
-    </div>
+    </nav> 
+    <div class="burguer-button icon-user"></div>
   </div>
   <section class="dudas">
       <a><strong>¿DUDAS?</strong> LLAMANOS AL:  <span>4778-3469 O AL 7777777777</span> <span style="border-bottom: 1px solid">Llamar</span></a>

@@ -47,3 +47,12 @@
 		// $open.addEventListener('click', (event) => {
 		// 	$activeMenu.classList.toggle("active");
 		// })
+		const $close = document.getElementById("close");
+		$close.addEventListener("click", (event)=> {
+			$buscador.classList.remove("open");
+		})
+		const $search = document.getElementById("search");
+		const $buscador = document.getElementById('buscador');
+		$search.addEventListener('click', (event) => {
+			$buscador.classList.toggle("open")
+		})
