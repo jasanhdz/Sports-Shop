@@ -387,7 +387,7 @@ body {
   }
   .options .suplementos li {
     padding: 0;
-    margin: 0px 20px;
+    margin: 16px 20px;
   }
   .suplementos .categorias {
     display: grid;
@@ -411,8 +411,6 @@ body {
     flex-direction: column;
     top: 59px;
     right: 0;
-    height: auto;
-    overflow: hidden;
   }
   .unset {
     display: none;
@@ -483,25 +481,23 @@ body {
     align-items: flex-start;
   }
   .options.active .suplementos {
-    padding: 0 22px;
-
+    padding: 15px 22px;
     
   }
   .options.active {
     display: flex;
     position: inherit;
     padding: 0;
-    width: 240px;
+    width: 320px;
     background-color: initial;
     border-top: 1px solid;
     border-radius: unset;
     flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
   .submenu-title {
     display: none;
-  }
-  .ropa {
-    padding: 12px 0 0 0;
   }
   .ropa li, .suplementos {
     padding: 2px 0;
