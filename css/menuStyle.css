@@ -404,7 +404,7 @@ body {
   }
   .menu.active {
     width: 360px;
-    background-color: rgba(28, 54, 67, .83);
+    background-color: rgba(28, 54, 67, .9);
     z-index: 2;
     display: flex;
     position: fixed;
@@ -488,7 +488,7 @@ body {
     display: flex;
     position: inherit;
     padding: 0;
-    width: 320px;
+    width: 80%;
     background-color: initial;
     border-top: 1px solid;
     border-radius: unset;
@@ -496,6 +496,11 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
   }
+  /* .menu.active .options.active {
+    width: 70%;
+    text-align: center;
+    border-bottom: 1px solid;
+  } */
   .submenu-title {
     display: none;
   }
@@ -547,7 +552,7 @@ body {
   position: absolute;
   width: auto;
   padding: 20px 30px 35px 35px;
-  background-color: rgba(5, 183, 199, .89);
+  background-color: rgba(59, 209, 223, 0.9);
   z-index: 2;
 }
 
